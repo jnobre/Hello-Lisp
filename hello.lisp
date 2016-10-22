@@ -26,3 +26,18 @@
    (if (zerop y)
        x
      (soma (1+ x) (1- y))))
+
+(defun potencia(x n)
+	 (if (= n 0)
+	     1
+	  (* x (potencia x (- n 1)))))
+
+(defun soma-1(list)
+   (if (null list)
+		0
+	     (+
+	      (first list)
+	      (soma-1 (rest list))
+	     )
+    )
+)
